@@ -12,10 +12,21 @@ const App = {
         this.setupScrollIndicator();
         this.setupHeroAnimation();
         this.handleReducedMotion();
+        this.setCurrentYear();
 
         // Log initialization
         console.log('🎬 Cinematic Taste Profile initialized');
         console.log(`📊 ${PROFILE_DATA.stats.totalFilms} films analyzed`);
+    },
+
+    /**
+     * Set the current year in the footer
+     */
+    setCurrentYear() {
+        const yearEl = document.getElementById('current-year');
+        if (yearEl) {
+            yearEl.textContent = new Date().getFullYear();
+        }
     },
 
     /**
