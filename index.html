@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinematic Taste Profile</title>
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="manifest" href="site.webmanifest">
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://api.themoviedb.org">
+    <link rel="preconnect" href="https://image.tmdb.org">
+
+    <!-- Fonts - Editorial Design System -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Source+Sans+3:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Ambient Background Effects -->
+    <div class="ambient-bg">
+        <div class="gradient-orb gradient-orb--1"></div>
+        <div class="gradient-orb gradient-orb--2"></div>
+        <div class="gradient-orb gradient-orb--3"></div>
+    </div>
+    <div class="scanlines"></div>
+    <div class="noise"></div>
+    <div class="grid-overlay"></div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <!-- HERO SECTION -->
+        <section class="hero" data-section="hero">
+            <div class="hero__container">
+                <div class="hero__glitch-wrapper">
+                    <h1 class="hero__title" data-text="CINEMATIC PROFILE OF DAVE ONKELS">
+                        <span class="hero__title-line">CINEMATIC</span>
+                        <span class="hero__title-line">PROFILE</span>
+                        <span class="hero__title-line hero__title-line--name">OF DAVE ONKELS</span>
+                    </h1>
+                </div>
+
+                <div class="hero__stats">
+                    <div class="hero__stat-block">
+                        <span class="hero__stat-number" data-count="819">0</span>
+                        <span class="hero__stat-label">FILMS ANALYZED</span>
+                    </div>
+                    <div class="hero__stat-divider"></div>
+                    <div class="hero__stat-block">
+                        <span class="hero__stat-number" data-count="86">0</span>
+                        <span class="hero__stat-label">YEARS OF CINEMA</span>
+                    </div>
+                </div>
+
+                <div class="hero__archetype">
+                    <span class="hero__archetype-label">DAVE'S ARCHETYPE</span>
+                    <h2 class="hero__archetype-title">Thoughtful Populist</h2>
+                </div>
+
+                <p class="hero__tagline">
+                    <span class="typewriter">"We used to look up at the sky and wonder at our place in the stars."</span>
+                    <span class="hero__tagline-source">— Cooper, Interstellar</span>
+                </p>
+
+                <div class="scroll-indicator">
+                    <span class="scroll-indicator__text">EXPLORE PROFILE</span>
+                    <div class="scroll-indicator__arrow">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 5v14M5 12l7 7 7-7"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GENRE DNA SECTION -->
+        <section class="section genre-section" data-section="genre">
+            <div class="section__header">
+                <span class="section__number">01</span>
+                <h2 class="section__title">Genre DNA</h2>
+                <p class="section__subtitle">The building blocks of Dave's cinematic taste</p>
+            </div>
+
+            <div class="genre-visualization">
+                <div class="genre-chart-container" id="genre-chart">
+                    <!-- Chart injected via JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ERA TIMELINE SECTION -->
+        <section class="section era-section" data-section="era">
+            <div class="section__header">
+                <span class="section__number">02</span>
+                <h2 class="section__title">Temporal Landscape</h2>
+                <p class="section__subtitle">Dave's watched 86 years of cinema, concentrated in the modern era</p>
+            </div>
+
+            <div class="era-timeline">
+                <div class="era-bar" data-decade="2020s" data-percent="27.4" data-count="224">
+                    <div class="era-bar__header">
+                        <span class="era-bar__decade">2020s</span>
+                        <span class="era-bar__stats">224 films</span>
+                    </div>
+                    <div class="era-bar__track">
+                        <div class="era-bar__fill" style="--target-width: 27.4%"></div>
+                    </div>
+                    <span class="era-bar__percent">27.4%</span>
+                </div>
+
+                <div class="era-bar era-bar--primary" data-decade="2010s" data-percent="37.1" data-count="304">
+                    <div class="era-bar__header">
+                        <span class="era-bar__decade">2010s</span>
+                        <span class="era-bar__stats">304 films</span>
+                    </div>
+                    <div class="era-bar__track">
+                        <div class="era-bar__fill" style="--target-width: 37.1%"></div>
+                    </div>
+                    <span class="era-bar__percent">37.1%</span>
+                    <span class="era-bar__badge">DOMINANT ERA</span>
+                </div>
+
+                <div class="era-bar" data-decade="2000s" data-percent="19.7" data-count="161">
+                    <div class="era-bar__header">
+                        <span class="era-bar__decade">2000s</span>
+                        <span class="era-bar__stats">161 films</span>
+                    </div>
+                    <div class="era-bar__track">
+                        <div class="era-bar__fill" style="--target-width: 19.7%"></div>
+                    </div>
+                    <span class="era-bar__percent">19.7%</span>
+                </div>
+
+                <div class="era-bar" data-decade="1990s" data-percent="8.8" data-count="72">
+                    <div class="era-bar__header">
+                        <span class="era-bar__decade">1990s</span>
+                        <span class="era-bar__stats">72 films</span>
+                    </div>
+                    <div class="era-bar__track">
+                        <div class="era-bar__fill" style="--target-width: 8.8%"></div>
+                    </div>
+                    <span class="era-bar__percent">8.8%</span>
+                </div>
+
+                <div class="era-bar" data-decade="1980s" data-percent="5.4" data-count="44">
+                    <div class="era-bar__header">
+                        <span class="era-bar__decade">1980s</span>
+                        <span class="era-bar__stats">44 films</span>
+                    </div>
+                    <div class="era-bar__track">
+                        <div class="era-bar__fill" style="--target-width: 5.4%"></div>
+                    </div>
+                    <span class="era-bar__percent">5.4%</span>
+                </div>
+
+                <div class="era-bar era-bar--classics" data-decade="Pre-1980" data-percent="1.6" data-count="14">
+                    <div class="era-bar__header">
+                        <span class="era-bar__decade">Classics</span>
+                        <span class="era-bar__stats">1939-1979</span>
+                    </div>
+                    <div class="era-bar__track">
+                        <div class="era-bar__fill" style="--target-width: 1.6%"></div>
+                    </div>
+                    <span class="era-bar__percent">1.6%</span>
+                </div>
+            </div>
+
+            <div class="era-insight">
+                <div class="stat-highlight">
+                    <span class="stat-highlight__number">64.5%</span>
+                    <span class="stat-highlight__label">of viewing from the last 15 years</span>
+                </div>
+                <p class="era-insight__text">
+                    Dave biases towards modern cinema with selective classic engagement. Foundational works from the 80s-90s shape contemporary preferences.
+                </p>
+            </div>
+        </section>
+
+        <!-- SIGNATURE PATTERNS SECTION -->
+        <section class="section patterns-section" data-section="patterns">
+            <div class="section__header">
+                <span class="section__number">03</span>
+                <h2 class="section__title">Signature Patterns</h2>
+                <p class="section__subtitle">The defining characteristics that shape Dave's taste</p>
+            </div>
+
+            <div class="pattern-cards">
+                <!-- Time Loop Card -->
+                <article class="pattern-card pattern-card--timeloop" data-pattern="timeloop">
+                    <div class="pattern-card__glow"></div>
+                    <div class="pattern-card__content">
+                        <div class="pattern-card__icon">
+                            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="32" cy="32" r="24"/>
+                                <path d="M32 16v16l8 8"/>
+                                <path d="M32 8c13.255 0 24 10.745 24 24" stroke-dasharray="4 4"/>
+                                <path d="M8 32c0-13.255 10.745-24 24-24" stroke-dasharray="4 4"/>
+                            </svg>
+                        </div>
+                        <h3 class="pattern-card__title">Time-Loop Obsession</h3>
+                        <div class="pattern-card__stat">
+                            <span class="pattern-card__stat-number">24</span>
+                            <span class="pattern-card__stat-label">temporal films</span>
+                        </div>
+                        <p class="pattern-card__description">
+                            Extraordinary affinity for puzzle-box narratives exploring choice, consequence, and philosophical depth through temporal mechanics.
+                        </p>
+                        <div class="pattern-card__films" id="timeloop-films">
+                            <!-- Film posters injected via TMDB -->
+                        </div>
+                        <ul class="pattern-card__list">
+                            <li>Palm Springs</li>
+                            <li>Groundhog Day</li>
+                            <li>Coherence</li>
+                            <li>Edge of Tomorrow</li>
+                            <li>Arrival</li>
+                            <li>About Time</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <!-- Genre Blender Card -->
+                <article class="pattern-card pattern-card--blender" data-pattern="blender">
+                    <div class="pattern-card__glow"></div>
+                    <div class="pattern-card__content">
+                        <div class="pattern-card__icon">
+                            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="24" cy="24" r="16"/>
+                                <circle cx="40" cy="24" r="16"/>
+                                <circle cx="32" cy="40" r="16"/>
+                            </svg>
+                        </div>
+                        <h3 class="pattern-card__title">Genre Blender</h3>
+                        <div class="pattern-card__stat">
+                            <span class="pattern-card__stat-number">2-3</span>
+                            <span class="pattern-card__stat-label">genres per film</span>
+                        </div>
+                        <p class="pattern-card__description">
+                            Complex narrative textures trump single-genre purity. The intersection of genres creates richer storytelling.
+                        </p>
+                        <div class="genre-combos">
+                            <div class="genre-combo">
+                                <span class="genre-combo__pair">Drama + Comedy</span>
+                                <span class="genre-combo__count">45 films</span>
+                            </div>
+                            <div class="genre-combo">
+                                <span class="genre-combo__pair">Action + Adventure</span>
+                                <span class="genre-combo__count">38 films</span>
+                            </div>
+                            <div class="genre-combo">
+                                <span class="genre-combo__pair">Romance + Comedy</span>
+                                <span class="genre-combo__count">35 films</span>
+                            </div>
+                            <div class="genre-combo">
+                                <span class="genre-combo__pair">Sci-Fi + Thriller</span>
+                                <span class="genre-combo__count">22 films</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Quality Seeker Card -->
+                <article class="pattern-card pattern-card--quality" data-pattern="quality">
+                    <div class="pattern-card__glow"></div>
+                    <div class="pattern-card__content">
+                        <div class="pattern-card__icon">
+                            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2">
+                                <polygon points="32,4 39,24 60,24 43,38 50,58 32,46 14,58 21,38 4,24 25,24"/>
+                            </svg>
+                        </div>
+                        <h3 class="pattern-card__title">Quality Threshold</h3>
+                        <div class="pattern-card__stat">
+                            <span class="pattern-card__stat-number">6.92</span>
+                            <span class="pattern-card__stat-label">average rating</span>
+                        </div>
+                        <p class="pattern-card__description">
+                            Selective but not elitist. Watches broadly but gravitates toward well-crafted films that earn their reputation.
+                        </p>
+                        <div class="rating-gauge">
+                            <div class="rating-gauge__track">
+                                <div class="rating-gauge__fill" style="--rating: 6.92"></div>
+                                <div class="rating-gauge__marker" style="--position: 69.2%"></div>
+                            </div>
+                            <div class="rating-gauge__labels">
+                                <span>1</span>
+                                <span>10</span>
+                            </div>
+                        </div>
+                        <div class="pattern-card__films" id="quality-films">
+                            <!-- Top rated film posters -->
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- DIRECTOR CONSTELLATION SECTION -->
+        <section class="section directors-section" data-section="directors">
+            <div class="section__header">
+                <span class="section__number">04</span>
+                <h2 class="section__title">Director Constellation</h2>
+                <p class="section__subtitle">The filmmakers who shape Dave's viewing universe</p>
+            </div>
+
+            <div class="constellation-container">
+                <div class="constellation" id="director-constellation">
+                    <!-- Director nodes injected via JS -->
+                </div>
+
+                <div class="director-spotlight" id="director-spotlight">
+                    <div class="director-spotlight__header">
+                        <h3 class="director-spotlight__name">Christopher Nolan</h3>
+                        <span class="director-spotlight__badge">COMPLETE FILMOGRAPHY</span>
+                    </div>
+                    <div class="director-spotlight__stats">
+                        <span class="director-spotlight__stat">10/10 films watched</span>
+                    </div>
+                    <div class="director-spotlight__films">
+                        <div class="director-film">
+                            <span class="director-film__title">Inception</span>
+                            <span class="director-film__rating">8.8</span>
+                        </div>
+                        <div class="director-film">
+                            <span class="director-film__title">Interstellar</span>
+                            <span class="director-film__rating">8.7</span>
+                        </div>
+                        <div class="director-film">
+                            <span class="director-film__title">Memento</span>
+                            <span class="director-film__rating">8.4</span>
+                        </div>
+                        <div class="director-film">
+                            <span class="director-film__title">The Dark Knight</span>
+                            <span class="director-film__rating">7.8</span>
+                        </div>
+                        <div class="director-film">
+                            <span class="director-film__title">The Prestige</span>
+                            <span class="director-film__rating">7.5</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="directors-grid">
+                <div class="director-node" data-director="Christopher Nolan" data-films="10" data-complete="true">
+                    <div class="director-node__avatar">CN</div>
+                    <span class="director-node__name">Christopher Nolan</span>
+                    <span class="director-node__count">10 films</span>
+                </div>
+                <div class="director-node" data-director="Denis Villeneuve" data-films="5">
+                    <div class="director-node__avatar">DV</div>
+                    <span class="director-node__name">Denis Villeneuve</span>
+                    <span class="director-node__count">5 films</span>
+                </div>
+                <div class="director-node" data-director="Russo Brothers" data-films="4">
+                    <div class="director-node__avatar">RB</div>
+                    <span class="director-node__name">Russo Brothers</span>
+                    <span class="director-node__count">4 films</span>
+                </div>
+                <div class="director-node" data-director="Richard Linklater" data-films="3">
+                    <div class="director-node__avatar">RL</div>
+                    <span class="director-node__name">Richard Linklater</span>
+                    <span class="director-node__count">3 films</span>
+                </div>
+                <div class="director-node" data-director="Taika Waititi" data-films="3">
+                    <div class="director-node__avatar">TW</div>
+                    <span class="director-node__name">Taika Waititi</span>
+                    <span class="director-node__count">3 films</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- THEMATIC DNA SECTION -->
+        <section class="section themes-section" data-section="themes">
+            <div class="section__header">
+                <span class="section__number">05</span>
+                <h2 class="section__title">Thematic DNA</h2>
+                <p class="section__subtitle">The emotional cores that resonate deepest with Dave</p>
+            </div>
+
+            <div class="themes-grid">
+                <div class="theme-card" data-theme="romance">
+                    <div class="theme-card__icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                        </svg>
+                    </div>
+                    <h3 class="theme-card__title">Romance with Depth</h3>
+                    <p class="theme-card__description">Love stories that transcend the meet-cute, blending fantasy or comedy elements.</p>
+                    <div class="theme-card__examples">
+                        <span>About Time</span>
+                        <span>Before Sunset</span>
+                        <span>Palm Springs</span>
+                    </div>
+                </div>
+
+                <div class="theme-card" data-theme="found-family">
+                    <div class="theme-card__icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
+                        </svg>
+                    </div>
+                    <h3 class="theme-card__title">Found Family & Loyalty</h3>
+                    <p class="theme-card__description">Bonds forged through adventure and adversity. The team that becomes home.</p>
+                    <div class="theme-card__examples">
+                        <span>MCU</span>
+                        <span>LOTR</span>
+                        <span>Star Wars</span>
+                    </div>
+                </div>
+
+                <div class="theme-card" data-theme="redemption">
+                    <div class="theme-card__icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                    </div>
+                    <h3 class="theme-card__title">Redemption Arcs</h3>
+                    <p class="theme-card__description">Characters transforming through struggle, earning their second chance.</p>
+                    <div class="theme-card__examples">
+                        <span>Forrest Gump</span>
+                        <span>A Beautiful Mind</span>
+                        <span>Beautiful Boy</span>
+                    </div>
+                </div>
+
+                <div class="theme-card" data-theme="existential">
+                    <div class="theme-card__icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9c0-.46-.04-.92-.1-1.36-.98 1.37-2.58 2.26-4.4 2.26-3.03 0-5.5-2.47-5.5-5.5 0-1.82.89-3.42 2.26-4.4-.44-.06-.9-.1-1.36-.1z"/>
+                        </svg>
+                    </div>
+                    <h3 class="theme-card__title">Existential Questions</h3>
+                    <p class="theme-card__description">Films that probe the nature of existence, time, and human purpose.</p>
+                    <div class="theme-card__examples">
+                        <span>Arrival</span>
+                        <span>Interstellar</span>
+                        <span>2001: A Space Odyssey</span>
+                    </div>
+                </div>
+
+                <div class="theme-card" data-theme="underdog">
+                    <div class="theme-card__icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M14.4 6L14 4H5v17h2v-7h5.6l.4 2h7V6z"/>
+                        </svg>
+                    </div>
+                    <h3 class="theme-card__title">Underdog Stories</h3>
+                    <p class="theme-card__description">Against-the-odds triumphs that celebrate perseverance and human spirit.</p>
+                    <div class="theme-card__examples">
+                        <span>Apollo 13</span>
+                        <span>Captain Fantastic</span>
+                        <span>Wonder</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AVOID ZONE SECTION -->
+        <section class="section avoid-section" data-section="avoid">
+            <div class="section__header section__header--warning">
+                <span class="section__number">06</span>
+                <h2 class="section__title">The Avoid Zone</h2>
+                <p class="section__subtitle">Genres that rarely resonate with Dave</p>
+            </div>
+
+            <div class="avoid-grid">
+                <div class="avoid-item" data-genre="Western" data-percent="0.1">
+                    <div class="avoid-item__icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="18" y1="6" x2="6" y2="18"/>
+                            <line x1="6" y1="6" x2="18" y2="18"/>
+                        </svg>
+                    </div>
+                    <span class="avoid-item__genre">Westerns</span>
+                    <span class="avoid-item__stat">0.1% — 1 film</span>
+                </div>
+
+                <div class="avoid-item" data-genre="Musical" data-percent="0.6">
+                    <div class="avoid-item__icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="18" y1="6" x2="6" y2="18"/>
+                            <line x1="6" y1="6" x2="18" y2="18"/>
+                        </svg>
+                    </div>
+                    <span class="avoid-item__genre">Musicals</span>
+                    <span class="avoid-item__stat">0.6% — 5 films</span>
+                </div>
+
+                <div class="avoid-item" data-genre="War" data-percent="1.1">
+                    <div class="avoid-item__icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="18" y1="6" x2="6" y2="18"/>
+                            <line x1="6" y1="6" x2="18" y2="18"/>
+                        </svg>
+                    </div>
+                    <span class="avoid-item__genre">War Films</span>
+                    <span class="avoid-item__stat">1.1% — 9 films</span>
+                </div>
+
+                <div class="avoid-item" data-genre="Horror" data-percent="7.6">
+                    <div class="avoid-item__icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M8 12h8"/>
+                        </svg>
+                    </div>
+                    <span class="avoid-item__genre">Pure Horror</span>
+                    <span class="avoid-item__stat">Prefers horror blended with sci-fi/thriller</span>
+                </div>
+            </div>
+
+            <div class="avoid-note">
+                <p>Art house experimental cinema and non-narrative forms see limited engagement. Preference is for story-driven experiences.</p>
+            </div>
+        </section>
+
+        <!-- RECOMMENDATION ENGINE SECTION -->
+        <section class="section recommendation-section" data-section="recommendation">
+            <div class="section__header">
+                <span class="section__number">07</span>
+                <h2 class="section__title">Recommendation Engine</h2>
+                <p class="section__subtitle">The algorithm of Dave's taste</p>
+            </div>
+
+            <div class="recommendation-grid">
+                <div class="recommendation-column recommendation-column--match">
+                    <h3 class="recommendation-column__title">
+                        <span class="recommendation-column__icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                            </svg>
+                        </span>
+                        Perfect Match
+                    </h3>
+                    <ul class="recommendation-list">
+                        <li class="recommendation-item recommendation-item--match">
+                            <span class="recommendation-item__check"></span>
+                            High-concept sci-fi with emotional core
+                        </li>
+                        <li class="recommendation-item recommendation-item--match">
+                            <span class="recommendation-item__check"></span>
+                            Time-loop / temporal mechanics
+                        </li>
+                        <li class="recommendation-item recommendation-item--match">
+                            <span class="recommendation-item__check"></span>
+                            Ensemble casts with character depth
+                        </li>
+                        <li class="recommendation-item recommendation-item--match">
+                            <span class="recommendation-item__check"></span>
+                            Genre-bending execution
+                        </li>
+                        <li class="recommendation-item recommendation-item--match">
+                            <span class="recommendation-item__check"></span>
+                            Romance with substance
+                        </li>
+                        <li class="recommendation-item recommendation-item--match">
+                            <span class="recommendation-item__check"></span>
+                            Intelligent blockbusters
+                        </li>
+                        <li class="recommendation-item recommendation-item--match">
+                            <span class="recommendation-item__check"></span>
+                            Animation with adult resonance
+                        </li>
+                        <li class="recommendation-item recommendation-item--match">
+                            <span class="recommendation-item__check"></span>
+                            Contained puzzle thrillers
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="recommendation-column recommendation-column--miss">
+                    <h3 class="recommendation-column__title">
+                        <span class="recommendation-column__icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                            </svg>
+                        </span>
+                        Potential Misses
+                    </h3>
+                    <ul class="recommendation-list">
+                        <li class="recommendation-item recommendation-item--miss">
+                            <span class="recommendation-item__cross"></span>
+                            Pure slasher horror
+                        </li>
+                        <li class="recommendation-item recommendation-item--miss">
+                            <span class="recommendation-item__cross"></span>
+                            Slow-burn art films
+                        </li>
+                        <li class="recommendation-item recommendation-item--miss">
+                            <span class="recommendation-item__cross"></span>
+                            Musical theater adaptations
+                        </li>
+                        <li class="recommendation-item recommendation-item--miss">
+                            <span class="recommendation-item__cross"></span>
+                            Pure war combat films
+                        </li>
+                        <li class="recommendation-item recommendation-item--miss">
+                            <span class="recommendation-item__cross"></span>
+                            Experimental cinema
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="final-quote">
+                <blockquote class="final-quote__text">
+                    "Give me smart, heartfelt stories with high concepts, genre-bending execution, and enough depth to reward repeated viewing."
+                </blockquote>
+                <div class="final-quote__attribution">
+                    <span class="final-quote__archetype">Dave Onkels</span>
+                    <span class="final-quote__divider">•</span>
+                    <span class="final-quote__stat">819 Films</span>
+                    <span class="final-quote__divider">•</span>
+                    <span class="final-quote__stat">86 Years of Cinema</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- HIGHEST RATED FILMS SECTION -->
+        <section class="section rated-section" data-section="rated">
+            <div class="section__header">
+                <span class="section__number">08</span>
+                <h2 class="section__title">Critical Peaks</h2>
+                <p class="section__subtitle">Movies that made a mark on Dave</p>
+            </div>
+
+            <div class="rated-films-grid" id="rated-films">
+                <!-- Films injected via JS with TMDB posters -->
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__content">
+            <p class="footer__text">Dave's Cinematic Taste Profile</p>
+            <p class="footer__subtext">Data visualization powered by TMDB</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <!-- Genre Films Overlay Drawer -->
+    <div class="genre-films-backdrop" id="genre-films-backdrop"></div>
+    <aside class="genre-films-panel" id="genre-films-panel" aria-hidden="true">
+        <!-- Content injected via JS -->
+    </aside>
+
+    <script src="js/data.js"></script>
+    <script src="js/tmdb.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/charts.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
